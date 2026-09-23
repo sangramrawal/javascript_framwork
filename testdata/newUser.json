@@ -1,0 +1,11 @@
+{
+
+    "name": "sam sung",
+    "email": "samsung5@example.com",
+    "password": "password123",
+    "interest": "JAVA",
+    "gender": "Male",
+    "state": "Maharashtra",
+    "hobbies": ["Reading", "Swimming", "Dancing"]
+
+}

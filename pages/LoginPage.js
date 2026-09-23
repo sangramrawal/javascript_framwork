@@ -12,6 +12,7 @@ export class LoginPage extends BasePage
         this.loginButton= page.getByRole('button', { name: 'Sign in' })
         this.newUserSignUpLink= page.getByRole('link', { name: 'New user? Signup' })
         this.errorMessage= page.locator(".errorMessage")
+        
     }
 
     async loginToApplication(username, Password)
