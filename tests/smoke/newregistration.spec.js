@@ -1,19 +1,18 @@
-import {test, expect} from "@playwright/test"
-import { LoginPage } from "../../pages/LoginPage.js"
-import { NewRegistration } from "../../pages/NewRegistration.js"
+//import {test, expect} from "@playwright/test"
+//import { LoginPage } from "../../pages/LoginPage.js"
+//import { NewRegistration } from "../../pages/NewRegistration.js"
 
+import {test, expect} from "../../fixture/fixture.js"
 import user from "../../testdata/newUser.json"
 
 test.describe('New User SignUp',{tags:['smoke','signUp']}, ()=>
 {
-    test("New User Registration", async({page})=>
+    test("New User Registration", async({page,loginPage,newUser})=>
     {
         await page.goto("/login")
 
-        const loginPage= new LoginPage(page)
         await loginPage.clickOnNewUserSignUpLink()
 
-        const newUser= new NewRegistration(page)
         await newUser.userDetails(user.name, user.email, user.password)
         await newUser.selectInterest(user.interest)
         await newUser.selectGender(user.gender)

@@ -1,0 +1,2 @@
+**** dropdown handled with value Maharashtra ****
+**** dropdown handled with value Reading,Swimming,Dancing ****

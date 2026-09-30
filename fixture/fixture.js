@@ -1,6 +1,7 @@
 import {test as base} from "@playwright/test"
 import { LoginPage } from "../pages/LoginPage.js"
 import { DashboardPage } from "../pages/DashboadPage.js"
+import {NewRegistration} from "../pages/NewRegistration.js"
 
 export const test=base.extend({
 
@@ -14,6 +15,11 @@ export const test=base.extend({
     {
         const dashboardPage = new DashboardPage(page);
         await use(dashboardPage);
+    },
+    newUser: async({page},use)=>
+    {
+        const newUser= new NewRegistration(page);
+        await use(newUser);
     }
 
 
