@@ -1,1 +1,2 @@
-this is demo filr for merge conflict
+this is demo filr for merge conflict- API updated
+updated by API
