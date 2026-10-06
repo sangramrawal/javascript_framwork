@@ -15,7 +15,9 @@ for (const user of multiuser)
            
            await loginPage.loginToApplication(user.username, user.password);
            expect(await loginPage.getErrorMessage()).toBe(user.message);
-
+           
+           console.log(await loginPage.getErrorMessage());
+           
         })
 
 }

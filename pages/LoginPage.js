@@ -11,8 +11,8 @@ export class LoginPage extends BasePage
         this.passwordField= page.getByPlaceholder('Enter Password')
         this.loginButton= page.getByRole('button', { name: 'Sign in' })
         this.newUserSignUpLink= page.getByRole('link', { name: 'New user? Signup' })
-        this.errorMessage= page.locator(".errorMessage")
-        
+        //this.errorMessage= page.locator(".errorMessage")
+        this.errorMessage= page.locator("//h2[@class='errorMessage']")        
     }
 
     async loginToApplication(username, Password)
@@ -33,7 +33,7 @@ export class LoginPage extends BasePage
 
     async getErrorMessage()
     {
-        await this.getText(this.errorMessage)
+        return await this.getText(this.errorMessage)
         //return await this.errorMessage.textContent();
     }
         

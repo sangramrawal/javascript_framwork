@@ -1,0 +1,2 @@
+logging in user with:   Email and Password is required
+Email and Password is required
